@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="532.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="TPGui.IU.FicheController">
+	<children>
+		<AnchorPane prefHeight="60.0" prefWidth="532.0"
+			style="-fx-background-color: #FFF8DC;">
+			<children>
+				<Label layoutX="194.0" layoutY="15.0" text="Fiche de suivi">
+					<font>
+						<Font name="Tahoma" size="24.0" />
+					</font>
+				</Label>
+			</children>
+		</AnchorPane>
+		<AnchorPane layoutX="21.0" layoutY="89.0" prefHeight="200.0"
+			prefWidth="200.0" style="-fx-background-color: #84DBF0;">
+			<children>
+				<Label layoutX="43.0" layoutY="14.0" text="Ajout des objectifs">
+					<font>
+						<Font name="Tahoma" size="14.0" />
+					</font>
+				</Label>
+				<Button layoutX="43.0" layoutY="134.0" mnemonicParsing="false"
+					onAction="#ajouterObjectif" text="Ajouter un objectif">
+					<font>
+						<Font name="Tahoma" size="12.0" />
+					</font>
+				</Button>
+				<ChoiceBox fx:id="typeObjectif" layoutX="27.0" layoutY="88.0"
+					prefWidth="150.0" />
+				<TextField fx:id="nomObjectif" layoutX="26.0" layoutY="45.0"
+					promptText="Nom de l'objectif" />
+				<Label fx:id="label1" layoutX="57.0" layoutY="92.0"
+					text="Type de l'objectif">
+					<font>
+						<Font name="Tahoma" size="12.0" />
+					</font>
+				</Label>
+			</children>
+		</AnchorPane>
+		<Button layoutX="234.0" layoutY="325.0" mnemonicParsing="false"
+			onAction="#switchToScene6" text="Retour">
+			<font>
+				<Font name="Tahoma" size="12.0" />
+			</font>
+		</Button>
+		<AnchorPane layoutX="292.0" layoutY="89.0" prefHeight="200.0"
+			prefWidth="200.0" style="-fx-background-color: #84DBF0;">
+			<children>
+				<Label layoutX="35.0" layoutY="14.0" text="Evaluation d'objectifs">
+					<font>
+						<Font name="Tahoma" size="14.0" />
+					</font>
+				</Label>
+				<ChoiceBox fx:id="noteObjectifs" layoutX="4.0" layoutY="50.0"
+					prefHeight="25.0" prefWidth="194.0" />
+				<Label fx:id="label2" layoutX="14.0" layoutY="54.0"
+					prefHeight="17.0" prefWidth="168.0" text="Attribuer une note aux objectifs">
+					<font>
+						<Font name="Tahoma" size="12.0" />
+					</font>
+				</Label>
+				<Button layoutX="14.0" layoutY="94.0" mnemonicParsing="false"
+					onAction="#annuler" text="Annuler">
+					<font>
+						<Font name="Tahoma" size="12.0" />
+					</font>
+				</Button>
+				<Button layoutX="92.0" layoutY="94.0" mnemonicParsing="false"
+					onAction="#objectifAtteint" text="Objectifs atteints">
+					<font>
+						<Font name="Tahoma" size="12.0" />
+					</font>
+				</Button>
+				<Button layoutX="58.0" layoutY="137.0" mnemonicParsing="false"
+					onAction="#confirmer" text="Confirmer">
+					<font>
+						<Font name="Tahoma" size="12.0" />
+					</font>
+				</Button>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>

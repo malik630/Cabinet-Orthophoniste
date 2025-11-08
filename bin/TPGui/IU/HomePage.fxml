@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="TPGui.IU.HomeController">
+	<children>
+		<AnchorPane prefHeight="60.0" prefWidth="600.0"
+			style="-fx-background-color: #FFF8DC;">
+			<children>
+				<Label layoutX="184.0" layoutY="15.0" text="Espace Orthophoniste">
+					<font>
+						<Font name="Tahoma" size="24.0" />
+					</font>
+				</Label>
+				<ImageView fitHeight="47.0" fitWidth="52.0" layoutX="14.0"
+					layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image
+							url="file:/D:/2CP/S2/POO/TP_POO_2024_Melliti_Abdelmalek_Allouche_Reda_G04/src/ImagesTP/home.png" />
+					</image>
+				</ImageView>
+			</children>
+		</AnchorPane>
+		<VBox layoutY="60.0" prefHeight="340.0" prefWidth="214.0"
+			style="-fx-background-color: #84DBF0;">
+			<children>
+				<Button mnemonicParsing="false" onAction="#switchToScene6"
+					prefHeight="61.0" prefWidth="216.0"
+					style="-fx-background-color: #84DBF0; -fx-border-color: white;"
+					text="Commencer une séance">
+					<font>
+						<Font name="Tahoma Bold" size="12.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false"
+					onAction="#switchToScene4" prefHeight="61.0" prefWidth="226.0"
+					style="-fx-background-color: #84DBF0; -fx-border-color: white;"
+					text="Consulter l'agenda">
+					<font>
+						<Font name="Tahoma Bold" size="12.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="71.0" mnemonicParsing="false"
+					onAction="#switchToScene8" prefHeight="61.0" prefWidth="216.0"
+					style="-fx-background-color: #84DBF0; -fx-border-color: white;"
+					text="Préparer les tests">
+					<font>
+						<Font name="Tahoma Bold" size="12.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="132.0" mnemonicParsing="false"
+					onAction="#consulterDossiers" prefHeight="61.0" prefWidth="218.0"
+					style="-fx-background-color: #84DBF0; -fx-border-color: white;"
+					text="Consulter la liste des dossiers">
+					<font>
+						<Font name="Tahoma Bold" size="12.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="193.0" mnemonicParsing="false"
+					onAction="#quitter" prefHeight="61.0" prefWidth="218.0"
+					style="-fx-background-color: #84DBF0; -fx-border-color: white;"
+					text="Quitter">
+					<font>
+						<Font name="Tahoma Bold" size="12.0" />
+					</font>
+				</Button>
+			</children>
+		</VBox>
+		<TreeView fx:id="listDossiers" layoutX="215.0" layoutY="61.0"
+			onContextMenuRequested="#SelectItems" onMouseClicked="#SelectItems"
+			prefHeight="340.0" prefWidth="383.0" visible="false" />
+	</children>
+</AnchorPane>

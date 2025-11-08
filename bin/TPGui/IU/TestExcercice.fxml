@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="TPGui.IU.TestExcercieController">
+	<children>
+		<AnchorPane fx:id="mmmm" layoutX="7.0" layoutY="-7.0"
+			prefHeight="400.0" prefWidth="600.0">
+			<children>
+				<TextField fx:id="nomTest" layoutX="21.0" layoutY="43.0"
+					prefHeight="14.0" prefWidth="237.0" promptText="Nom du Test" />
+				<TextField fx:id="capacite" layoutX="21.0" layoutY="81.0"
+					prefHeight="14.0" prefWidth="237.0" promptText="Capacite" />
+				<Button fx:id="AjouterQuestion" layoutX="21.0" layoutY="120.0"
+					mnemonicParsing="false" onAction="#showType" prefHeight="14.0"
+					prefWidth="237.0" text="AjouterQuestion" />
+				<RadioButton fx:id="Libre" layoutX="190.0" layoutY="167.0"
+					mnemonicParsing="false" onAction="#getFood" text="Libre" visible="false">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<toggleGroup>
+						<ToggleGroup fx:id="Type" />
+					</toggleGroup>
+				</RadioButton>
+				<RadioButton fx:id="QCU" layoutX="112.0" layoutY="167.0"
+					mnemonicParsing="false" onAction="#getFood" text="QCU" toggleGroup="$Type"
+					visible="false">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</RadioButton>
+				<RadioButton fx:id="QCM" layoutX="21.0" layoutY="167.0"
+					mnemonicParsing="false" onAction="#getFood" text="QCM" toggleGroup="$Type"
+					visible="false">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</RadioButton>
+				<TextField fx:id="Enonce" layoutX="332.0" layoutY="43.0"
+					prefHeight="50.0" prefWidth="237.0" promptText="Enonce" visible="false" />
+				<Button fx:id="SauvegarderReponse" layoutX="332.0" layoutY="220.0"
+					mnemonicParsing="false" onAction="#hideSaisieRep" prefHeight="14.0"
+					prefWidth="237.0" text="Sauvegarder la réponse" visible="false" />
+				<Button fx:id="AjouterReponse" layoutX="332.0" layoutY="146.0"
+					mnemonicParsing="false" onAction="#showSaisieRep" prefHeight="14.0"
+					prefWidth="237.0" text="Ajouter Reponse" visible="false" />
+				<TextField fx:id="SaisirReponse" layoutX="332.0" layoutY="187.0"
+					prefHeight="14.0" prefWidth="237.0" promptText="Saisir la réponse"
+					visible="false" />
+				<Button fx:id="sauvegarderQst" layoutX="21.0" layoutY="207.0"
+					mnemonicParsing="false" onAction="#cacherSaisieQuest" prefHeight="14.0"
+					prefWidth="237.0" text="Sauvegarder la question" visible="false" />
+				<Button fx:id="SauvegarderTest" layoutX="181.0" layoutY="305.0"
+					mnemonicParsing="false" onAction="#Sauvegarderetcacher" prefHeight="14.0"
+					prefWidth="237.0" text="Sauvegarder le test" />
+				<TextField fx:id="NbReponses" layoutX="332.0" layoutY="107.0"
+					prefHeight="14.0" prefWidth="237.0" promptText="Nombre de reponses justes"
+					visible="false" />
+				<Label layoutX="217.0" layoutY="14.0"
+					text="Création d'un test de questions">
+					<font>
+						<Font name="Georgia" size="14.0" />
+					</font>
+				</Label>
+				<Button layoutX="274.0" layoutY="361.0" mnemonicParsing="false"
+					onAction="#switchToScene8" text="Retour" />
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>
